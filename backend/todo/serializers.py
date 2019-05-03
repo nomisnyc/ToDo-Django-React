@@ -1,0 +1,11 @@
+# todo/serializers.py
+# converts model data to json
+
+from rest_framework import serializers
+from .models import Todo
+
+class TodoSerializer(serializers.ModelSerializer):
+  class Meta:
+    model = Todo
+    fields = ('id', 'title', 'description', 'completed', 'dateEntry')
+     
